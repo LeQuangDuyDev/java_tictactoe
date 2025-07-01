@@ -1,29 +1,30 @@
 package com.example.tictactoe.dto;
 
-public class UserRegisterDto {
-    private String fullname;
+public class LoginRequest {
     private String email;
     private String password;
 
-    // Getters & Setters
-    public String getFullname() {
-        return fullname;
+    public LoginRequest() {
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public LoginRequest(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
+    // getter and setter
+    // email
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
 
+    // password
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
