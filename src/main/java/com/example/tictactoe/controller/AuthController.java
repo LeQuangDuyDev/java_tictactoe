@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.example.tictactoe.dto.AuthResponse;
+import com.example.tictactoe.dto.LoginRequest;
 import com.example.tictactoe.dto.RegisterRequest;
 import com.example.tictactoe.service.AuthService;
 
@@ -28,4 +29,19 @@ public class AuthController {
             return ResponseEntity.badRequest().body(response);
         }
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+        
+            AuthResponse response = authService.login(request);
+
+            if(response.isSuccess()){
+                return ResponseEntity.ok(response);
+
+            }else {
+                return ResponseEntity.badRequest().body(response);
+            }
+
+    }
+    
 }

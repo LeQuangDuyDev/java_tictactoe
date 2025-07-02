@@ -58,4 +58,25 @@ public class ValidationUtil {
 
         return null;
     }
+
+    // public String validateLogin(String email, String password) {
+
+    //     if (email == null || email.trim().isEmpty()) {
+    //         return "Email không được để trống";
+    //     }
+
+    //     if (!isValidEmail(email)) {
+    //         return "Định dạng email không hợp lệ";
+    //     }
+
+    //     if (!userRepository.existsByEmail(email)) {
+    //         return "Email chưa được đăng ký";
+    //     }
+
+    //     if (password == null || password.trim().isEmpty()) {
+    //         return "Mật khẩu không được để trống";
+    //     }
+
+    //     return null;
+    // }
 }
